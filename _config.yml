@@ -21,8 +21,8 @@ author: M. H. Safarpour
 
 navbar-links:
   About Me: "aboutme"
-  Resume: "/Resome.pdf"
-  Publication: "https://scholar.google.com/citations?hl=en&user=7RZGpNcAAAAJ"
+  Resume: "/Resume.pdf"
+  Publications: "https://scholar.google.com/citations?hl=en&user=7RZGpNcAAAAJ"
  # Resources:
  #   - Beautiful Jekyll: "https://beautifuljekyll.com"
   #  - Learn markdown: "https://www.markdowntutorial.com/"
@@ -53,9 +53,9 @@ round-avatar: true
 # Uncomment the links you want to show and add your information to each one.
 social-network-links:
   email: "safarpour.mh1@gmail.com"
-  rss: true  # remove this line if you don't want to show an RSS link at the bottom
+#  rss: true  # remove this line if you don't want to show an RSS link at the bottom
   # facebook: deanattali
-  github: https://github.com/safarpour-mh
+  github: safarpour-mh
  # twitter: daattali
 #  patreon: DeanAttali
 #  youtube: "@daattali"
@@ -76,8 +76,8 @@ social-network-links:
 #  calendly: yourname
 #  mastodon: instance.url/@username
 #  bluesky: yourname
-  ORCID: https://orcid.org/0009-0008-5274-8551
-  google-scholar: https://scholar.google.com/citations?hl=en&user=7RZGpNcAAAAJ
+  ORCID: 0009-0008-5274-8551
+  google-scholar: citations?hl=en&user=7RZGpNcAAAAJ
 #  discord: "invite_code" or "users/userid" or "invite/invite_code"
 #  kaggle: yourname
 #  hackerrank: yourname
