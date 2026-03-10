@@ -1,7 +1,7 @@
 ---
 title: Short Bio
 ---
-# Mohammad Hossein (Mo) Safarpour
+
 ### PhD Candidate in Computer Science
 
 Specializing in Soft Computing and Artificial Intelligence with a focus on interpretable machine learning and hybrid intelligence systems. Over 20 years of professional experience in data science and computational intelligence.
