@@ -11,7 +11,7 @@ author: Bill Smith
 ---
 
 {: .box-success}
-This is a demo post to show you how to write blog posts with markdown.  I strongly encourage you to [take 5 minutes to learn how to write in markdown](https://markdowntutorial.com/) - it'll teach you how to transform regular text into bold/italics/tables/etc.<br/>I also encourage you to look at the [code that created this post](https://raw.githubusercontent.com/daattali/beautiful-jekyll/master/_posts/2020-02-28-sample-markdown.md) to learn some more advanced tips about using markdown in Beautiful Jekyll.
+MOHAMMAD HOSSEIN SAFARPOUR received the B.A. degree in applied mathematics from Islamic Azad University, Gorgan Branch, Iran, in 2002, and the M.A. degree in astrophysics from Islamic Azad University, Central Tehran Branch, Iran, in 2014, with a focus on gravitation. He is currently pursuing the Ph.D. degree in computer science, specializing in soft computing and artificial intelligence, with Islamic Azad University, Arak Branch, Arak, Iran. His research interests include fuzzy theory, approximate algorithms, rough set theory, and complex computation.
 
 **Here is some bold text**
 
