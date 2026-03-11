@@ -77,7 +77,7 @@ social-network-links:
 #  calendly: yourname
 #  mastodon: instance.url/@username
 #  bluesky: yourname
-arxiv:https://arxiv.org/search/cs?searchtype=author&query=Safarpour,+M+H
+arxiv: https://arxiv.org/search/cs?searchtype=author&query=Safarpour,+M+H
   ORCID: 0009-0008-5274-8551
   google-scholar: citations?hl=en&user=7RZGpNcAAAAJ
 #  discord: "invite_code" or "users/userid" or "invite/invite_code"
