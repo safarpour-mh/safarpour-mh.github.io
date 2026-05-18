@@ -1,26 +1,19 @@
----
-layout: page
-title: About me
-# subtitle: Why you'd want to go on a date with me
----
-
-👋 **Hi, I'm Mo Safarpour**  
-PhD Candidate in AI | Data Scientist | Open Science Advocate
-
-🔍 **Professional Journey**  
-I work at the intersection of data mining, statistical learning, and interpretable AI. With over **20 years of professional experience** in large-scale infrastructure organizations (including Tehran Province Water and Wastewater Company), I bridge the gap between theoretical AI research and practical industrial applications. My background spans from Applied Mathematics and Astrophysics to advanced Computer Science.
-
-🧠 **Research Focus**  
-I develop label-agnostic feature selection methods grounded in fuzzy equivalence and sigmoid similarity for transparent, data-driven discovery. My current research explores hybrid intelligence systems and explainable machine learning models that are both accurate and interpretable.
-
-🛠 **Open-Source Contributions**  
-I am a strong advocate for open science and reproducible research. All my code and datasets are archived with persistent DOIs. I am the creator and maintainer of:
-*   **fuzzyml:** A lightweight Python library for fuzzy logic modeling.
-*   **aicore:** A Python Core AI Library for ML primitives and distance metrics.
-
-💬 **Philosophy**  
-🐢 *"Move like the turtle: calm, steady, unstoppable."*
-
-📧 **Contact**  
-*   safarpour.mh1@gmail.com
-*   m.safarpour@iau.ac.ir
+👋 Hi, I'm Mo Safarpour
+PhD Candidate in Computer Science | AI Researcher | Open Science Advocate
+🔍 Professional Journey
+I work at the intersection of soft computing, statistical learning, and interpretable artificial intelligence. With over two decades of experience in data science and computational intelligence across large-scale infrastructure projects, I specialize in translating complex analytical challenges into robust, theory-grounded solutions. My academic path—from Applied Mathematics and Astrophysics to advanced Computer Science—reflects a lifelong commitment to interdisciplinary problem-solving and scientific rigor.
+🧠 Research Focus
+My research develops label-agnostic, interpretable feature selection methods grounded in fuzzy equivalence relations and similarity-based modeling. I focus on hybrid intelligence systems that balance predictive accuracy with transparency—enabling trustworthy, data-driven discovery in high-dimensional engineering and biomedical domains. Core areas include:
+• Fuzzy Rough Set Theory & Hybrid Information Systems
+• Multi-objective & Stability-Aware Feature Selection
+• Explainable AI (XAI) for Scientific & Industrial Applications
+🛠 Open-Source Contributions
+I believe reproducible research is the foundation of scientific progress. All my code, datasets, and preprints are publicly archived with persistent DOIs via Zenodo and GitHub. I am the creator and maintainer of:
+• fuzzyml: A lightweight Python library for fuzzy logic modeling (membership functions, rule-based inference).
+• aicore: A backend-agnostic Python library for core AI primitives—distance metrics, entropy computations, statistical utilities, and normalization tools.
+💬 Personal Philosophy
+🐢 "Move like the turtle: calm, steady, unstoppable."
+Progress is not about speed—it's about consistency, intention, and resilience. In research, as in life, I prioritize thoughtful iteration over haste, depth over distraction, and long-term impact over short-term gains.
+📧 Get in Touch
+✉️ safarpour.mh1@gmail.com
+✉️ m.safarpour@iau.ac.ir
