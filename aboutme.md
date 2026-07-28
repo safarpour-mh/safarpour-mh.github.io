@@ -8,7 +8,7 @@ Permalink: /about/
 
 # 👋 Hi, I'm Mo Safarpour
 
-**PhD Candidate in Computer Science (Soft Computing & AI) | Data Scientist | Open Science Advocate**
+PhD Candidate in Computer Science (Soft Computing & AI) | Data Scientist | Open Science Advocate
 
 ---
 
