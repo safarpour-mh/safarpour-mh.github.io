@@ -52,11 +52,8 @@ round-avatar: true
 # Select the social network links that you want to show in the footer.
 # You can change the order that they show up on the page by changing the order here.
 # Uncomment the links you want to show and add your information to each one.
-social-network-links:
-  email: "safarpour.mh1@gmail.com"
 #  rss: true  # remove this line if you don't want to show an RSS link at the bottom
   # facebook: deanattali
-  github: safarpour-mh
  # twitter: daattali
 #  patreon: DeanAttali
 #  youtube: "@daattali"
@@ -77,14 +74,17 @@ social-network-links:
 #  calendly: yourname
 #  mastodon: instance.url/@username
 #  bluesky: yourname
-arxiv: https://arxiv.org/search/cs?searchtype=author&query=Safarpour,+M+H
-  ORCID: 0009-0008-5274-8551
-  google-scholar: citations?hl=en&user=7RZGpNcAAAAJ
+social-network-links:
+  email: "safarpour.mh1@gmail.com"
+  github: safarpour-mh
+  arxiv: "https://arxiv.org/search/cs?searchtype=author&query=Safarpour,+M+H"
+  ORCID: "0009-0008-5274-8551"
+  google-scholar: "citations?hl=en&user=7RZGpNcAAAAJ"
 #  discord: "invite_code" or "users/userid" or "invite/invite_code"
 #  kaggle: yourname
 #  hackerrank: yourname
 #  gitlab: yourname
-#  itchio: yourname
+#  itch.io: yourname
 #  untappd: yourname
 #  strava: youruserid
 
