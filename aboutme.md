@@ -1,10 +1,10 @@
 ---
-layout: page
+Layout: Page
 title: About Me
-permalink: /about/
+Permalink: /about/
 ---
 
-# 👤 About Me
+# About Me
 
 # 👋 Hi, I'm Mo Safarpour
 
