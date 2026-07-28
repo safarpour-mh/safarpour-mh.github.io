@@ -1,14 +1,14 @@
 ---
-Layout: Page
+layout: page
 title: About Me
-Permalink: /about/
+permalink: /about/
 ---
 
 # About Me
 
 # 👋 Hi, I'm Mo Safarpour
 
-PhD Candidate in Computer Science (Soft Computing & AI) | Data Scientist | Open Science Advocate
+PhD Candidate in Computer Science (Soft Computing & AI) • Data Scientist • Open Science Advocate
 
 ---
 
@@ -44,8 +44,8 @@ My research centers on developing label-agnostic feature selection methods groun
 
 I am a strong advocate for open science and reproducible research. I ensure all my code and datasets are archived with persistent DOIs. I am the creator and maintainer of:
 
-- **`fuzzyml`**: A lightweight Python library for fuzzy logic modeling
-- **`aicore`**: A Python Core AI Library for ML primitives and distance metrics
+- **[`fuzzyml`](https://github.com/safarpour-mh/fuzzyml)**: A lightweight Python library for fuzzy logic modeling
+- **[`aicore`](https://github.com/safarpour-mh/aicore)**: A Python Core AI Library for ML primitives and distance metrics
 
 ## 💬 Philosophy
 
