@@ -6,84 +6,56 @@ permalink: /about/
 
 # 👤 About Me
 
-## 👋 Hi, I'm Mo Safarpour
-*PhD Candidate in Computer Science | AI Researcher | Open Science Advocate*
+# 👋 Hi, I'm Mo Safarpour
+
+**PhD Candidate in Computer Science (Soft Computing & AI) | Data Scientist | Open Science Advocate**
 
 ---
 
-## 🔍 Professional Journey
-
-I work at the intersection of **soft computing**, **statistical learning**, and **interpretable artificial intelligence**. With over two decades of experience in data science and computational intelligence across large-scale infrastructure projects, I specialize in translating complex analytical challenges into robust, theory-grounded solutions.
-
-My academic path—from **Applied Mathematics** and **Astrophysics** to advanced **Computer Science**—reflects a lifelong commitment to interdisciplinary problem-solving and scientific rigor.
-
----
-
-## 🧠 Research Focus
-
-My research develops **label-agnostic, interpretable feature selection methods** grounded in fuzzy equivalence relations and similarity-based modeling. I focus on hybrid intelligence systems that balance predictive accuracy with transparency—enabling trustworthy, data-driven discovery in high-dimensional engineering and biomedical domains.
-
-### Core Areas:
-- **Fuzzy Rough Set Theory** & Hybrid Information Systems
-- **Multi-objective & Stability-Aware Feature Selection**
-- **Explainable AI (XAI)** for Scientific & Industrial Applications
-- **Reproducible Workflows** & Open-Source Tooling
-
----
-
-## 🛠 Open-Source Contributions
-
-> *"Science advances when knowledge is shared, not siloed."*
-
-I believe reproducible research is the foundation of scientific progress. All my code, datasets, and preprints are publicly archived with persistent DOIs via **Zenodo** and **GitHub**.
-
-### Maintained Projects:
-
-| Project | Description | Link |
-|---------|-------------|------|
-| **`aicore`** | Backend-agnostic Python library for core AI primitives: distance metrics, entropy, statistical utilities, normalization. | [GitHub](https://github.com/safarpour-mh/aicore) |
-| **`fuzzyml`** | Lightweight library for fuzzy logic modeling: membership functions, rule-based inference, time-series support. | [GitHub](https://github.com/safarpour-mh/fuzzyml) |
-
-Both projects feature:
-✅ Modular, framework-independent design  
-✅ Numerically stable algorithms  
-✅ Comprehensive unit tests & documentation  
-✅ MIT License for maximum reusability  
-
----
-
-## 💬 Personal Philosophy
-
-> ### 🐢 *"Move like the turtle: calm, steady, unstoppable."*
->
-> Progress is not about speed—it's about **consistency**, **intention**, and **resilience**.  
-> In research, as in life, I prioritize:
-> - 🎯 Thoughtful iteration over haste
-> - 🌊 Depth over distraction
-> - 🌱 Long-term impact over short-term gains
-
-This philosophy guides my approach to both scientific inquiry and collaborative development.
-
----
+I operate at the intersection of data mining, statistical learning, and interpretable AI. Drawing on **extensive professional experience** in data science and computational intelligence, I specialize in bridging the gap between theoretical research and practical, real-world applications in large-scale sectors. My core work focuses on data mining, feature selection, and advanced algorithm design. Notably, I have designed and published research on a novel metaheuristic algorithm: the **Purification Water Process Algorithm (PWPA)**. My academic foundation is deeply interdisciplinary, spanning Applied Mathematics, Astrophysics, and Computer Science.
 
 ## 🎓 Education
 
-| Degree | Field | Institution | Period |
-|--------|-------|-------------|--------|
-| **PhD** | Computer Science (Soft Computing & AI) | Islamic Azad University, Arak Branch | 2018–Present |
-| **MSc** | Physics (Astrophysics) | Islamic Azad University, Central Tehran Branch | 2010–2013 |
-| **BSc** | Applied Mathematics | Islamic Azad University, Gorgan Branch | 1998–2002 |
+### PhD in Computer Science (Soft Computing & Artificial Intelligence)
+**Islamic Azad University, Arak Branch, Iran** | 2018–Present  
+*Thesis:* "A New Modeling to Feature Selection Based on the Fuzzy Rough Set Theory in Normal and Optimistic States on Hybrid Information Systems"
+
+### MSc in Physics (Astrophysics)
+**Islamic Azad University, Central Tehran Branch, Iran** | 2010–2013  
+*Thesis:* "An Analysis of the Number Density of Gamma-Ray Bursts (GRBs) at Cosmological Epochs"
+
+### BSc in Applied Mathematics
+**Islamic Azad University, Gorgan Branch, Iran** | 1998–2002
+
+## 🔬 Research Focus & Interests
+
+My research centers on developing label-agnostic feature selection methods grounded in fuzzy equivalence and sigmoid similarity for transparent, data-driven discovery. I am passionate about building hybrid intelligence systems and Explainable AI (XAI) models that do not compromise accuracy for interpretability.
+
+**Core Interests:**
+- Interpretable & Explainable AI (XAI)
+- Fuzzy Logic & Rough Sets
+- Hybrid Intelligence
+- Feature Selection & Dimensionality Reduction
+- Metaheuristic Algorithm Design
+- Statistical Learning
+- Open-Source Scientific Software
+
+## 🛠 Open-Source Contributions
+
+I am a strong advocate for open science and reproducible research. I ensure all my code and datasets are archived with persistent DOIs. I am the creator and maintainer of:
+
+- **`fuzzyml`**: A lightweight Python library for fuzzy logic modeling
+- **`aicore`**: A Python Core AI Library for ML primitives and distance metrics
+
+## 💬 Philosophy
+
+> 🐢 *"Move like the turtle: calm, steady, unstoppable."*
+
+## 📧 Contact
+
+- **Email:** [safarpour.mh1@gmail.com](mailto:safarpour.mh1@gmail.com)
+- **Academic Email:** [m.safarpour@iau.ac.ir](mailto:m.safarpour@iau.ac.ir)
 
 ---
 
-## 📬 Get in Touch
-
-I welcome collaborations, discussions, and opportunities in postdoctoral research.
-
-✉️ **Email**:  
-[safarpour.mh1@gmail.com](mailto:safarpour.mh1@gmail.com)  
-[m.safarpour@iau.ac.ir](mailto:m.safarpour@iau.ac.ir)
-
-(https://www.researchgate.net/profile/Mohammad-Safarpour)
-
-📍 **Location**: Tehran, Iran
+*Last updated: July 2026*
