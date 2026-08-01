@@ -23,6 +23,7 @@ navbar-links:
   Home: "https://safarpour-mh.github.io/"
   About Me: "aboutme"
   Resume: "/Resume.pdf"
+  Research Resources: "researchresources"
   Publications: "https://scholar.google.com/citations?hl=en&user=7RZGpNcAAAAJ"
  # Resources:
  #   - Beautiful Jekyll: "https://beautifuljekyll.com"
