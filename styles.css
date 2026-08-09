@@ -137,6 +137,26 @@ section{padding:64px 0}
   .footer-grid{grid-template-columns:1fr}
   .pub-list li{grid-template-columns:1fr;gap:6px}
   .contact-grid{grid-template-columns:1fr}
+
+
+/* ---------- Contact Form ---------- */
+.contact-form{background:var(--paper);border:1px solid var(--line);padding:40px;max-width:760px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.form-group{margin-bottom:22px}
+.form-group label{display:block;font-weight:600;font-size:.88rem;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-soft);margin-bottom:8px}
+.form-group input,
+.form-group textarea{width:100%;padding:12px 14px;border:1.5px solid var(--line);border-radius:3px;font-family:var(--sans);font-size:1rem;background:var(--cream);color:var(--ink);transition:.2s}
+.form-group input:focus,
+.form-group textarea:focus{outline:none;border-color:var(--accent);background:var(--paper)}
+.form-group textarea{resize:vertical;min-height:120px;font-family:var(--sans)}
+.contact-form button{margin-top:10px;cursor:pointer;border:none;font-family:var(--sans)}
+
+@media(max-width:600px){
+  .form-row{grid-template-columns:1fr}
+  .contact-form{padding:26px}
+}
+
+  
   .timeline{padding-left:30px}
   .timeline-item::before{left:-38px}
 }
