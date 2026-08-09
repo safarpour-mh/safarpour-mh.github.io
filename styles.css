@@ -1,11 +1,11 @@
-/* ===== Mo Safarpour — Magazine-style Academic Theme ===== */
+/* ===== Mo Safarpour — Magazine-style Academic Theme v2 ===== */
 :root{
-  --ink:#182430;        /* سرمه‌ای تیره */
+  --ink:#182430;
   --ink-soft:#3f4c59;
   --muted:#68737f;
-  --cream:#faf7f2;      /* پس‌زمینه کرم */
+  --cream:#faf7f2;
   --paper:#ffffff;
-  --accent:#c4553b;     /* آجری/ترراکوتا */
+  --accent:#c4553b;
   --accent-dark:#a03e27;
   --line:#e5ded2;
   --serif:"Fraunces", Georgia, serif;
@@ -34,8 +34,9 @@ img{max-width:100%;display:block}
 .btn-ghost{border:1.5px solid var(--ink);color:var(--ink)}
 .btn-ghost:hover{background:var(--ink);color:var(--cream)}
 .btn-small{padding:8px 18px;background:var(--ink);color:var(--cream)!important}
+.btn-icon{display:inline-flex;align-items:center;gap:8px}
 
-/* ---------- Hero (Magazine style) ---------- */
+/* ---------- Hero ---------- */
 .hero{padding:90px 0 70px}
 .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:64px;align-items:center}
 .kicker{text-transform:uppercase;letter-spacing:.18em;font-size:.78rem;font-weight:700;color:var(--accent);margin-bottom:18px}
@@ -47,21 +48,30 @@ img{max-width:100%;display:block}
 .hero-photo img{border:1px solid var(--line);box-shadow:14px 14px 0 var(--accent);aspect-ratio:4/5;object-fit:cover;width:100%}
 .hero-photo figcaption{margin-top:22px;font-size:.85rem;color:var(--muted);text-transform:uppercase;letter-spacing:.12em}
 
+/* ---------- Page Hero (for sub-pages) ---------- */
+.page-hero{padding:80px 0 50px;border-bottom:1px solid var(--line)}
+.page-hero h1{font-family:var(--serif);font-size:clamp(2.4rem,5vw,3.6rem);font-weight:600;letter-spacing:-.01em;line-height:1.1;margin-bottom:18px}
+.page-hero .lede{max-width:42em}
+
 /* ---------- Sections ---------- */
 section{padding:64px 0}
 .section-head{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:36px;border-bottom:2px solid var(--ink);padding-bottom:12px}
 .section-title{font-family:var(--serif);font-size:2rem;font-weight:600}
+.section-title small{display:block;font-size:.78rem;font-family:var(--sans);text-transform:uppercase;letter-spacing:.18em;color:var(--accent);font-weight:700;margin-bottom:6px}
 .all-link{font-weight:600;font-size:.92rem}
 
-/* ---------- Research Focus ---------- */
+/* ---------- Focus Grid ---------- */
 .focus-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
 .focus-card{background:var(--paper);border:1px solid var(--line);padding:30px 26px;transition:.25s}
 .focus-card:hover{transform:translateY(-4px);border-top:3px solid var(--accent)}
 .focus-card .num{font-family:var(--serif);font-size:1rem;color:var(--accent);font-weight:700}
 .focus-card h3{font-family:var(--serif);font-size:1.3rem;margin:10px 0 10px}
 .focus-card p{font-size:.95rem;color:var(--ink-soft)}
+.focus-list{list-style:none;margin-top:8px}
+.focus-list li{position:relative;padding-left:20px;font-size:.9rem;color:var(--ink-soft);margin-bottom:4px}
+.focus-list li::before{content:"";position:absolute;left:0;top:10px;width:8px;height:8px;background:var(--accent);border-radius:50%}
 
-/* ---------- Publications (numbered, editorial) ---------- */
+/* ---------- Publications ---------- */
 .pub-list{list-style:none}
 .pub-list li{display:grid;grid-template-columns:90px 1fr;gap:26px;padding:26px 0;border-top:1px solid var(--line)}
 .pub-year{font-family:var(--serif);font-weight:700;font-size:1.25rem;color:var(--accent)}
@@ -79,6 +89,37 @@ section{padding:64px 0}
 .news-card h3{font-family:var(--serif);font-size:1.15rem;margin:10px 0 8px}
 .news-card p{font-size:.93rem;color:var(--ink-soft)}
 
+/* ---------- Education Timeline ---------- */
+.timeline{position:relative;padding-left:40px;border-left:2px solid var(--line)}
+.timeline-item{position:relative;padding-bottom:40px}
+.timeline-item:last-child{padding-bottom:0}
+.timeline-item::before{content:"";position:absolute;left:-48px;top:6px;width:14px;height:14px;border-radius:50%;background:var(--cream);border:3px solid var(--accent)}
+.timeline-date{font-family:var(--serif);font-size:.85rem;text-transform:uppercase;letter-spacing:.14em;color:var(--accent);font-weight:700;margin-bottom:4px}
+.timeline-item h3{font-family:var(--serif);font-size:1.4rem;margin-bottom:6px;font-weight:600}
+.timeline-item h4{font-size:1rem;color:var(--ink-soft);font-weight:500;margin-bottom:10px}
+.thesis{font-size:.95rem;color:var(--muted);font-style:italic;padding-left:16px;border-left:3px solid var(--accent)}
+
+/* ---------- Open Source Grid ---------- */
+.oss-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.oss-card{background:var(--paper);border:1px solid var(--line);padding:30px;display:flex;flex-direction:column}
+.oss-card h3{font-family:var(--serif);font-size:1.4rem;margin-bottom:10px}
+.oss-card h3 code{background:var(--accent);color:#fff;font-family:var(--serif);padding:2px 10px;border-radius:3px;font-size:1.1rem;margin-right:6px}
+.oss-card p{color:var(--ink-soft);flex:1}
+.oss-card .oss-links{margin-top:14px;font-size:.88rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em}
+
+/* ---------- Big Quote ---------- */
+.big-quote{padding:80px 0;background:var(--ink);color:var(--cream);text-align:center}
+.big-quote blockquote{font-family:var(--serif);font-size:clamp(1.8rem,4vw,3rem);line-height:1.25;font-weight:400;font-style:italic;max-width:18em;margin:0 auto}
+.big-quote cite{display:block;margin-top:24px;font-size:.9rem;letter-spacing:.18em;text-transform:uppercase;font-style:normal;color:var(--accent);font-family:var(--sans)}
+
+/* ---------- Contact Strip ---------- */
+.contact-strip{background:var(--paper);border-top:1px solid var(--line);padding:56px 0}
+.contact-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:30px;max-width:700px}
+.contact-card{border:1px solid var(--line);padding:24px 26px;display:flex;align-items:center;gap:18px}
+.contact-card .icon{font-size:1.8rem;flex-shrink:0}
+.contact-card strong{display:block;font-size:.85rem;text-transform:uppercase;letter-spacing:.14em;color:var(--muted);margin-bottom:2px}
+.contact-card a{font-family:var(--serif);font-size:1.05rem;word-break:break-all}
+
 /* ---------- Footer ---------- */
 .site-footer{background:var(--ink);color:var(--cream);padding:56px 0 28px;margin-top:40px}
 .footer-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:40px}
@@ -92,7 +133,10 @@ section{padding:64px 0}
 @media(max-width:900px){
   .hero-grid{grid-template-columns:1fr;gap:44px}
   .hero-photo{max-width:420px}
-  .focus-grid,.news-grid{grid-template-columns:1fr}
+  .focus-grid,.news-grid,.oss-grid{grid-template-columns:1fr}
   .footer-grid{grid-template-columns:1fr}
   .pub-list li{grid-template-columns:1fr;gap:6px}
+  .contact-grid{grid-template-columns:1fr}
+  .timeline{padding-left:30px}
+  .timeline-item::before{left:-38px}
 }
