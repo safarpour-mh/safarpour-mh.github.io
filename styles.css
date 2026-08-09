@@ -1,0 +1,98 @@
+/* ===== Mo Safarpour — Magazine-style Academic Theme ===== */
+:root{
+  --ink:#182430;        /* سرمه‌ای تیره */
+  --ink-soft:#3f4c59;
+  --muted:#68737f;
+  --cream:#faf7f2;      /* پس‌زمینه کرم */
+  --paper:#ffffff;
+  --accent:#c4553b;     /* آجری/ترراکوتا */
+  --accent-dark:#a03e27;
+  --line:#e5ded2;
+  --serif:"Fraunces", Georgia, serif;
+  --sans:"Inter", -apple-system, sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--ink);background:var(--cream);line-height:1.65}
+.container{max-width:1100px;margin:0 auto;padding:0 24px}
+a{color:var(--accent);text-decoration:none}
+a:hover{color:var(--accent-dark)}
+img{max-width:100%;display:block}
+
+/* ---------- Header ---------- */
+.site-header{position:sticky;top:0;z-index:50;background:rgba(250,247,242,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav-wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 24px;flex-wrap:wrap}
+.brand{font-family:var(--serif);font-weight:700;font-size:1.35rem;color:var(--ink)}
+.site-nav{display:flex;align-items:center;gap:26px;flex-wrap:wrap}
+.site-nav a{color:var(--ink-soft);font-weight:500;font-size:.95rem}
+.site-nav a.active{color:var(--ink);box-shadow:inset 0 -2px 0 var(--accent)}
+
+/* ---------- Buttons ---------- */
+.btn{display:inline-block;padding:12px 26px;border-radius:3px;font-weight:600;font-size:.95rem;transition:.2s}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-primary:hover{background:var(--accent-dark);color:#fff}
+.btn-ghost{border:1.5px solid var(--ink);color:var(--ink)}
+.btn-ghost:hover{background:var(--ink);color:var(--cream)}
+.btn-small{padding:8px 18px;background:var(--ink);color:var(--cream)!important}
+
+/* ---------- Hero (Magazine style) ---------- */
+.hero{padding:90px 0 70px}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:64px;align-items:center}
+.kicker{text-transform:uppercase;letter-spacing:.18em;font-size:.78rem;font-weight:700;color:var(--accent);margin-bottom:18px}
+.hero h1{font-family:var(--serif);font-size:clamp(2.4rem,5vw,3.9rem);line-height:1.08;font-weight:600;letter-spacing:-.01em;margin-bottom:22px}
+.hero h1 em{font-style:italic;color:var(--accent)}
+.lede{font-size:1.15rem;color:var(--ink-soft);max-width:34em;margin-bottom:30px}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:28px}
+.hero-meta{list-style:none;display:flex;gap:22px;flex-wrap:wrap;font-size:.92rem;color:var(--muted)}
+.hero-photo img{border:1px solid var(--line);box-shadow:14px 14px 0 var(--accent);aspect-ratio:4/5;object-fit:cover;width:100%}
+.hero-photo figcaption{margin-top:22px;font-size:.85rem;color:var(--muted);text-transform:uppercase;letter-spacing:.12em}
+
+/* ---------- Sections ---------- */
+section{padding:64px 0}
+.section-head{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:36px;border-bottom:2px solid var(--ink);padding-bottom:12px}
+.section-title{font-family:var(--serif);font-size:2rem;font-weight:600}
+.all-link{font-weight:600;font-size:.92rem}
+
+/* ---------- Research Focus ---------- */
+.focus-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.focus-card{background:var(--paper);border:1px solid var(--line);padding:30px 26px;transition:.25s}
+.focus-card:hover{transform:translateY(-4px);border-top:3px solid var(--accent)}
+.focus-card .num{font-family:var(--serif);font-size:1rem;color:var(--accent);font-weight:700}
+.focus-card h3{font-family:var(--serif);font-size:1.3rem;margin:10px 0 10px}
+.focus-card p{font-size:.95rem;color:var(--ink-soft)}
+
+/* ---------- Publications (numbered, editorial) ---------- */
+.pub-list{list-style:none}
+.pub-list li{display:grid;grid-template-columns:90px 1fr;gap:26px;padding:26px 0;border-top:1px solid var(--line)}
+.pub-year{font-family:var(--serif);font-weight:700;font-size:1.25rem;color:var(--accent)}
+.pub-body h3{font-family:var(--serif);font-size:1.2rem;line-height:1.35;margin-bottom:6px}
+.pub-meta{font-size:.92rem;color:var(--muted)}
+.pub-meta em{color:var(--ink-soft)}
+.pub-links{margin-top:8px;font-size:.88rem;font-weight:600}
+.pub-links a{margin-right:14px;text-transform:uppercase;letter-spacing:.08em}
+
+/* ---------- News ---------- */
+.news{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.news-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.news-card{border:1px solid var(--line);padding:26px}
+.news-date{font-size:.78rem;text-transform:uppercase;letter-spacing:.14em;color:var(--accent);font-weight:700}
+.news-card h3{font-family:var(--serif);font-size:1.15rem;margin:10px 0 8px}
+.news-card p{font-size:.93rem;color:var(--ink-soft)}
+
+/* ---------- Footer ---------- */
+.site-footer{background:var(--ink);color:var(--cream);padding:56px 0 28px;margin-top:40px}
+.footer-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:40px}
+.footer-grid h4{font-family:var(--serif);margin-bottom:14px;font-size:1.05rem}
+.footer-grid a{color:var(--cream);opacity:.85;display:block;margin-bottom:8px;font-size:.93rem}
+.footer-grid a:hover{opacity:1;color:var(--cream)}
+.brand-light{font-family:var(--serif);font-size:1.4rem;font-weight:700;margin-bottom:8px}
+.copyright{margin-top:44px;padding-top:18px;border-top:1px solid rgba(255,255,255,.15);font-size:.85rem;opacity:.7;text-align:center}
+
+/* ---------- Responsive ---------- */
+@media(max-width:900px){
+  .hero-grid{grid-template-columns:1fr;gap:44px}
+  .hero-photo{max-width:420px}
+  .focus-grid,.news-grid{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr}
+  .pub-list li{grid-template-columns:1fr;gap:6px}
+}
