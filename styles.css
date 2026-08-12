@@ -189,3 +189,24 @@ html {
   .timeline{padding-left:30px}
   .timeline-item::before{left:-38px}
 }
+/* Smooth scroll for anchor links (e.g., #collaborate) */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* accounts for sticky header */
+}
+
+/* Optional: subtle entrance animation for collaboration quote */
+#collaborate blockquote {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Hover effect for the collaborator link in hero-meta */
+.hero-meta a:hover {
+  color: var(--accent);
+  transition: color 0.2s ease;
+}
