@@ -40,12 +40,11 @@ My research centers on developing label-agnostic feature selection methods groun
 - Statistical Learning
 - Open-Source Scientific Software
 
-## 🛠 Open-Source Contributions
+## 🌍 Open Science & Reproducibility
 
-I am a strong advocate for open science and reproducible research. I ensure all my code and datasets are archived with persistent DOIs. I am the creator and maintainer of:
+I am a strong advocate for open science and reproducible research. All my code, datasets, and supplementary materials are archived with persistent DOIs and made publicly available. 
 
-- **[`fuzzyml`](https://github.com/safarpour-mh/fuzzyml)**: A lightweight Python library for fuzzy logic modeling
-- **[`aicore`](https://github.com/safarpour-mh/aicore)**: A Python Core AI Library for ML primitives and distance metrics
+For a complete overview of my open-source contributions, research code libraries, and curated datasets, please visit my [**Research Resources**](/research-resources/) page.
 
 ## 💬 Philosophy
 
@@ -58,4 +57,4 @@ I am a strong advocate for open science and reproducible research. I ensure all 
 
 ---
 
-*Last updated: July 2026*
+*Last updated: August 2026*
