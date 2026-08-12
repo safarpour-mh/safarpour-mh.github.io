@@ -4,12 +4,263 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Research Resources — M. H. Safarpour</title>
-<meta name="description" content="Supplementary materials, source code, datasets and experimental results for published research by Mo Safarpour.">
+<meta name="description" content="Open datasets, research code libraries, and supplementary materials for published research by M. H. Safarpour.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧠</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<style>
+  /* Section header styling */
+  .resource-section {
+    margin-bottom: 70px;
+    padding-bottom: 50px;
+  }
+  .resource-section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  .section-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 10px;
+    padding: 6px 14px;
+    background: var(--accent-soft, rgba(59, 130, 246, 0.08));
+    border-radius: 20px;
+    border: 1px solid var(--accent-border, rgba(59, 130, 246, 0.2));
+  }
+  .section-description {
+    font-size: 1.05rem;
+    color: var(--ink-soft);
+    max-width: 45em;
+    margin-bottom: 32px;
+    line-height: 1.6;
+  }
+
+  /* Dataset card - special styling */
+  .dataset-card {
+    background: linear-gradient(135deg, var(--paper) 0%, var(--bg) 100%);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 32px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  .dataset-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+    border-color: var(--accent);
+  }
+  .dataset-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(180deg, var(--accent), var(--accent-dark, #1e40af));
+  }
+  .dataset-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+  }
+  .dataset-title {
+    font-family: var(--serif);
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+    line-height: 1.3;
+  }
+  .dataset-badges {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 4px 10px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    border-radius: 6px;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    color: var(--ink);
+  }
+  .badge-primary {
+    background: var(--accent);
+    color: white;
+    border-color: var(--accent);
+  }
+  .badge-new {
+    background: #dc2626;
+    color: white;
+    border-color: #dc2626;
+  }
+  .badge-python {
+    background: #f1e05abd;
+    color: #57430b;
+    border-color: #f1e05abd;
+  }
+  .dataset-description {
+    color: var(--ink-soft);
+    line-height: 1.7;
+    margin-bottom: 20px;
+    font-size: 0.98rem;
+  }
+  .dataset-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 12px;
+    margin-bottom: 22px;
+    padding: 16px;
+    background: var(--bg);
+    border-radius: 10px;
+    border: 1px solid var(--line);
+  }
+  .stat-item {
+    text-align: center;
+  }
+  .stat-value {
+    font-family: var(--serif);
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--accent);
+    display: block;
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+  .stat-label {
+    font-size: 0.75rem;
+    color: var(--ink-soft);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+  }
+  .dataset-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 20px;
+  }
+  .tag {
+    font-size: 0.75rem;
+    padding: 3px 9px;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    color: var(--ink-soft);
+  }
+  .dataset-links {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .dataset-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 14px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.2s;
+    border: 1px solid var(--line);
+    background: var(--paper);
+    color: var(--ink);
+  }
+  .dataset-links a:hover {
+    background: var(--accent);
+    color: white;
+    border-color: var(--accent);
+    transform: translateY(-1px);
+  }
+  .dataset-links a.primary-link {
+    background: var(--accent);
+    color: white;
+    border-color: var(--accent);
+  }
+  .dataset-links a.primary-link:hover {
+    background: var(--accent-dark, #1e40af);
+    border-color: var(--accent-dark, #1e40af);
+  }
+
+  /* Code library card */
+  .code-card {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 16px;
+    transition: all 0.2s;
+  }
+  .code-card:hover {
+    border-color: var(--accent);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  }
+  .code-card h3 {
+    font-family: var(--serif);
+    font-size: 1.3rem;
+    margin: 0 0 8px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .code-card .lang-badge {
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 4px;
+    background: #f1e05abd;
+    color: #57430b;
+    font-family: monospace;
+  }
+
+  /* Divider */
+  .section-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--line) 20%, var(--line) 80%, transparent);
+    margin: 50px 0;
+  }
+
+  /* Empty state for coming-soon sections */
+  .coming-soon {
+    padding: 30px;
+    border: 2px dashed var(--line);
+    border-radius: 12px;
+    text-align: center;
+    color: var(--ink-soft);
+    font-style: italic;
+    background: var(--bg);
+  }
+  .coming-soon-icon {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  @media (max-width: 640px) {
+    .dataset-card { padding: 22px; }
+    .dataset-title { font-size: 1.25rem; }
+    .dataset-stats { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
 </head>
 <body>
 
@@ -31,123 +282,135 @@
   <div class="container">
     <p class="kicker">Open Science</p>
     <h1>Research Resources</h1>
-    <p class="lede">Supplementary materials associated with my published research. For each publication, you can access the source code, datasets, experimental results, and other supporting resources required to reproduce or extend the reported findings.</p>
+    <p class="lede">A curated collection of open datasets, research code libraries, and supplementary materials supporting reproducible science. Each resource is independently documented, versioned, and publicly archived.</p>
   </div>
 </section>
 
-<!-- ===== Resource Packages ===== -->
+<!-- ===== Main Content ===== -->
 <section>
   <div class="container">
-    <div class="section-head">
-      <h2 class="section-title"><small>Supplementary Materials</small>Available Resources</h2>
+
+    <!-- ========= SECTION 1: PUBLISHED RESEARCH ========= -->
+    <div class="resource-section">
+      <span class="section-label">📑 Published Research</span>
+      <h2 class="section-title"><small>Supplementary Materials</small>Reproducibility Packages</h2>
+      <p class="section-description">
+        Code, datasets, and supplementary materials associated with my peer-reviewed publications. Each package includes everything needed to reproduce the reported findings.
+      </p>
+
+      <div class="pub-list">
+        <li>
+          <span class="pub-year">2026</span>
+          <div class="pub-body">
+            <h3>Physics-grounded optimization via interpretable process mapping</h3>
+            <p class="pub-meta"><strong>Royal Society Open Science</strong>, Vol. 13 · April 2026</p>
+            <p class="pub-links">
+              <a href="https://royalsocietypublishing.org/rsos/article/13/6/251929/482010/Physics-grounded-optimization-via-interpretable" target="_blank" rel="noopener">Article →</a>
+              <a href="https://github.com/safarpour-mh/PWPA" target="_blank" rel="noopener">GitHub →</a>
+              <a href="https://doi.org/10.5281/zenodo.17237555" target="_blank" rel="noopener">Zenodo →</a>
+            </p>
+          </div>
+        </li>
+
+        <li>
+          <span class="pub-year">2026</span>
+          <div class="pub-body">
+            <h3>SimGroup-FS: Multi-Way Redundancy Modeling for Interpretable Feature Selection in Supervised Learning</h3>
+            <p class="pub-meta"><strong>IEEE Access</strong>, Vol. 14 · February 2026</p>
+            <p class="pub-links">
+              <a href="https://ieeexplore.ieee.org/document/11408164" target="_blank" rel="noopener">Article →</a>
+              <a href="https://github.com/safarpour-mh/SimGroupFS" target="_blank" rel="noopener">GitHub →</a>
+              <a href="https://doi.org/10.5281/zenodo.18215330" target="_blank" rel="noopener">Zenodo →</a>
+            </p>
+          </div>
+        </li>
+      </div>
     </div>
-    
-    <div class="pub-list">
-      <li>
-        <span class="pub-year">2026</span>
-        <div class="pub-body">
-          <h3>Physics-grounded optimization via interpretable process mapping</h3>
-          <p class="pub-meta"><strong>Royal Society Open Science</strong>, Vol. 13 · April 2026</p>
-          <p class="pub-links">
-            <a href="https://royalsocietypublishing.org/rsos/article/13/6/251929/482010/Physics-grounded-optimization-via-interpretable" target="_blank" rel="noopener">Article →</a>
-            <a href="https://github.com/safarpour-mh/PWPA" target="_blank" rel="noopener">GitHub →</a>
-            <a href="https://doi.org/10.5281/zenodo.17237555" target="_blank" rel="noopener">Zenodo →</a>
-          </p>
+
+    <div class="section-divider"></div>
+
+    <!-- ========= SECTION 2: CODE & LIBRARIES ========= -->
+    <div class="resource-section">
+      <span class="section-label">💻 Code & Libraries</span>
+      <h2 class="section-title"><small>Reusable Software</small>Research Tools & Frameworks</h2>
+      <p class="section-description">
+        Open-source libraries and development tools designed for the broader research community. These projects are independent of specific publications and aim to provide general-purpose utilities for data science, machine learning, and scientific computing.
+      </p>
+
+      <!-- ===== Library 1: fuzzyml ===== -->
+      <article class="dataset-card">
+        <div class="dataset-header">
+          <div>
+            <h3 class="dataset-title">fuzzyml — Fuzzy Logic Modeling Library</h3>
+            <p style="color:var(--ink-soft);font-size:0.9rem;margin:6px 0 0 0">
+              A lightweight Python library for fuzzy logic modeling and soft computing
+            </p>
+          </div>
+          <div class="dataset-badges">
+            <span class="badge badge-python">Python</span>
+            <span class="badge badge-primary">Open Source</span>
+          </div>
         </div>
-      </li>
-      
-      <li>
-        <span class="pub-year">2026</span>
-        <div class="pub-body">
-          <h3>SimGroup-FS: Multi-Way Redundancy Modeling for Interpretable Feature Selection in Supervised Learning</h3>
-          <p class="pub-meta"><strong>IEEE Access</strong>, Vol. 14 · February 2026</p>
-          <p class="pub-links">
-            <a href="https://ieeexplore.ieee.org/document/11408164" target="_blank" rel="noopener">Article →</a>
-            <a href="https://github.com/safarpour-mh/SimGroupFS" target="_blank" rel="noopener">GitHub →</a>
-            <a href="https://doi.org/10.5281/zenodo.18215330" target="_blank" rel="noopener">Zenodo →</a>
-          </p>
+
+        <p class="dataset-description">
+          <strong>fuzzyml</strong> is a lightweight, extensible Python library designed for fuzzy logic modeling, fuzzy set operations, and soft computing applications. It provides intuitive APIs for defining membership functions, fuzzy rules, and inference systems, making it suitable for researchers and practitioners working with uncertainty-aware systems.
+        </p>
+
+        <div class="dataset-tags">
+          <span class="tag">Fuzzy Logic</span>
+          <span class="tag">Soft Computing</span>
+          <span class="tag">Python</span>
+          <span class="tag">Membership Functions</span>
+          <span class="tag">Inference Systems</span>
+          <span class="tag">Rough Sets</span>
         </div>
-      </li>
-    </div>
-  </div>
-</section>
 
-<!-- ===== Contents Grid ===== -->
-<section style="background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
-  <div class="container">
-    <div class="section-head">
-      <h2 class="section-title"><small>What's Included</small>Resource Contents</h2>
-    </div>
-    <p style="font-size:1.05rem;color:var(--ink-soft);max-width:40em;margin-bottom:30px">
-      Each resource package may include the following materials to facilitate reproducibility, verification, and further research.
-    </p>
-    <div class="focus-grid">
-      <article class="focus-card">
-        <span class="num">💻</span>
-        <h3>Source Code</h3>
-        <p>Complete implementation of algorithms, models, and experimental scripts.</p>
+        <div class="dataset-links">
+          <a href="https://github.com/safarpour-mh/fuzzyml" target="_blank" rel="noopener" class="primary-link">
+            📦 GitHub Repository →
+          </a>
+          <a href="https://pypi.org/project/fuzzyml/" target="_blank" rel="noopener">
+            🐍 PyPI →
+          </a>
+        </div>
       </article>
-      <article class="focus-card">
-        <span class="num">📊</span>
-        <h3>Datasets</h3>
-        <p>Raw and processed datasets used in experiments and benchmarking.</p>
-      </article>
-      <article class="focus-card">
-        <span class="num">📈</span>
-        <h3>Experimental Results</h3>
-        <p>Complete numerical results, tables, figures, and statistical analyses.</p>
-      </article>
-      <article class="focus-card">
-        <span class="num">📄</span>
-        <h3>Documentation</h3>
-        <p>Detailed instructions, API references, and usage examples.</p>
-      </article>
-      <article class="focus-card">
-        <span class="num">📦</span>
-        <h3>Supplementary Materials</h3>
-        <p>Additional appendices, derivations, and supporting information.</p>
-      </article>
-    </div>
-  </div>
-</section>
 
-<!-- ===== CTA Section ===== -->
-<section>
-  <div class="container" style="text-align:center;max-width:700px">
-    <h2 style="font-family:var(--serif);font-size:2rem;margin-bottom:18px">Supporting Open Science</h2>
-    <p style="font-size:1.1rem;color:var(--ink-soft);margin-bottom:30px">
-      All materials are openly available through GitHub and Zenodo in support of transparency, reproducibility, and open science.
-    </p>
-    <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
-      <a href="https://github.com/safarpour-mh" target="_blank" rel="noopener" class="btn btn-primary">Visit GitHub Profile →</a>
-      <a href="https://zenodo.org/search?q=metadata.creators.person_or_org.name%3A%22safarpour-mh%22&l=list&p=1&s=10&sort=bestmatch" target="_blank" rel="noopener" class="btn btn-ghost">Browse Zenodo Archive →</a>
-    </div>
-  </div>
-</section>
+      <!-- ===== Library 2: aicore ===== -->
+      <article class="dataset-card">
+        <div class="dataset-header">
+          <div>
+            <h3 class="dataset-title">aicore — Python Core AI Library</h3>
+            <p style="color:var(--ink-soft);font-size:0.9rem;margin:6px 0 0 0">
+              Core ML primitives, distance metrics, and foundational utilities for AI research
+            </p>
+          </div>
+          <div class="dataset-badges">
+            <span class="badge badge-python">Python</span>
+            <span class="badge badge-primary">Open Source</span>
+          </div>
+        </div>
 
-<!-- ===== Footer ===== -->
-<footer class="site-footer">
-  <div class="container footer-grid">
-    <div>
-      <p class="brand-light">M. H. Safarpour</p>
-      <p>PhD Candidate in Computer Science<br>Data Scientist & Researcher</p>
-    </div>
-    <div>
-      <h4>Explore</h4>
-      <a href="about.html">About Me</a>
-      <a href="research-resources.html">Research Resources</a>
-      <a href="publications.html">Publications</a>
-      <a href="contact.html">Contact</a>
-    </div>
-    <div>
-      <h4>Profiles</h4>
-      <a href="https://scholar.google.com/citations?hl=en&user=7RZGpNcAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
-      <a href="https://orcid.org/0009-0008-5274-8551" target="_blank" rel="noopener">ORCID</a>
-      <a href="https://github.com/safarpour-mh" target="_blank" rel="noopener">GitHub</a>
-    </div>
-  </div>
-  <p class="copyright">© 2026 M. H. Safarpour · All rights reserved</p>
-</footer>
+        <p class="dataset-description">
+          <strong>aicore</strong> is a foundational Python library providing core machine learning primitives, distance metrics, similarity functions, and essential utilities for AI research. Designed as a lightweight dependency-free toolkit, it serves as the building block for more complex machine learning pipelines and research prototypes.
+        </p>
 
-</body>
-</html>
+        <div class="dataset-tags">
+          <span class="tag">Machine Learning</span>
+          <span class="tag">Distance Metrics</span>
+          <span class="tag">Python</span>
+          <span class="tag">Core Utilities</span>
+          <span class="tag">Similarity Functions</span>
+          <span class="tag">ML Primitives</span>
+        </div>
+
+        <div class="dataset-links">
+          <a href="https://github.com/safarpour-mh/aicore" target="_blank" rel="noopener" class="primary-link">
+            📦 GitHub Repository →
+          </a>
+          <a href="https://pypi.org/project/aicore/" target="_blank" rel="noopener">
+            🐍 PyPI →
+          </a>
+        </div>
+      </article>
+
+      <div class="coming-soon" style="
