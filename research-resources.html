@@ -13,7 +13,7 @@
 <style>
   /* Section styling */
   .resource-section {
-    margin-bottom: 70px;
+    margin-bottom: 80px;
     padding-bottom: 50px;
   }
   .resource-section:last-child {
@@ -30,7 +30,7 @@
     letter-spacing: 0.08em;
     text-transform: uppercase;
     color: var(--accent);
-    margin-bottom: 10px;
+    margin-bottom: 16px;
     padding: 6px 14px;
     background: var(--accent-soft, rgba(59, 130, 246, 0.08));
     border-radius: 20px;
@@ -40,17 +40,105 @@
     font-size: 1.05rem;
     color: var(--ink-soft);
     max-width: 45em;
-    margin-bottom: 32px;
-    line-height: 1.6;
+    margin-bottom: 40px;
+    line-height: 1.7;
   }
 
-  /* Dataset card styling */
+  /* Publication list - CLEAN GRID LAYOUT */
+  .pub-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .pub-list > li {
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    gap: 28px;
+    padding: 28px 32px;
+    background: linear-gradient(135deg, var(--paper) 0%, var(--bg) 100%);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    border-left: 4px solid var(--accent);
+    transition: all 0.3s ease;
+    align-items: start;
+  }
+  .pub-list > li:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.06);
+    border-color: var(--accent);
+  }
+  .pub-year {
+    font-family: var(--serif);
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--accent);
+    background: var(--accent-soft, rgba(59, 130, 246, 0.08));
+    border: 1px solid var(--accent-border, rgba(59, 130, 246, 0.2));
+    padding: 10px 0;
+    text-align: center;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+    margin-top: 4px;
+  }
+  .pub-body {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .pub-body h3 {
+    font-family: var(--serif);
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.4;
+    margin: 0;
+    color: var(--ink);
+  }
+  .pub-meta {
+    margin: 0;
+    font-size: 0.95rem;
+    color: var(--ink-soft);
+    font-weight: 500;
+  }
+  .pub-links {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 4px;
+  }
+  .pub-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 7px 14px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.2s;
+    border: 1px solid var(--line);
+    background: var(--paper);
+    color: var(--ink);
+  }
+  .pub-links a:hover {
+    background: var(--accent);
+    color: white;
+    border-color: var(--accent);
+    transform: translateY(-1px);
+  }
+
+  /* Dataset card styling - SPACIOUS & CLEAN */
   .dataset-card {
     background: linear-gradient(135deg, var(--paper) 0%, var(--bg) 100%);
     border: 1px solid var(--line);
     border-radius: 16px;
-    padding: 32px;
-    margin-bottom: 20px;
+    padding: 36px 40px;
+    margin-bottom: 28px;
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
@@ -73,27 +161,30 @@
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    gap: 16px;
+    gap: 24px;
     flex-wrap: wrap;
-    margin-bottom: 16px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--line);
   }
   .dataset-title {
     font-family: var(--serif);
     font-size: 1.5rem;
     font-weight: 600;
-    margin: 0;
-    line-height: 1.3;
+    margin: 0 0 8px 0;
+    line-height: 1.35;
   }
   .dataset-badges {
     display: flex;
     gap: 8px;
     flex-wrap: wrap;
+    align-items: center;
   }
   .badge {
     display: inline-flex;
     align-items: center;
     gap: 5px;
-    padding: 4px 10px;
+    padding: 5px 11px;
     font-size: 0.75rem;
     font-weight: 600;
     border-radius: 6px;
@@ -118,22 +209,27 @@
   }
   .dataset-description {
     color: var(--ink-soft);
-    line-height: 1.7;
-    margin-bottom: 20px;
+    line-height: 1.75;
+    margin-bottom: 26px;
     font-size: 0.98rem;
+    max-width: 60em;
   }
   .dataset-stats {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-    gap: 12px;
-    margin-bottom: 22px;
-    padding: 16px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-bottom: 26px;
+    padding: 20px 24px;
     background: var(--bg);
-    border-radius: 10px;
+    border-radius: 12px;
     border: 1px solid var(--line);
   }
   .stat-item {
     text-align: center;
+    padding: 8px 4px;
+  }
+  .stat-item:not(:last-child) {
+    border-right: 1px solid var(--line);
   }
   .stat-value {
     font-family: var(--serif);
@@ -142,39 +238,41 @@
     color: var(--accent);
     display: block;
     line-height: 1;
-    margin-bottom: 4px;
+    margin-bottom: 6px;
   }
   .stat-label {
-    font-size: 0.75rem;
+    font-size: 0.72rem;
     color: var(--ink-soft);
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.06em;
     font-weight: 600;
   }
   .dataset-tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 6px;
-    margin-bottom: 20px;
+    gap: 8px;
+    margin-bottom: 24px;
   }
   .tag {
-    font-size: 0.75rem;
-    padding: 3px 9px;
+    font-size: 0.78rem;
+    padding: 4px 11px;
     background: var(--paper);
     border: 1px solid var(--line);
     border-radius: 12px;
     color: var(--ink-soft);
+    font-weight: 500;
   }
   .dataset-links {
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
+    padding-top: 8px;
   }
   .dataset-links a {
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    padding: 8px 14px;
+    padding: 9px 16px;
     font-size: 0.88rem;
     font-weight: 600;
     border-radius: 8px;
@@ -236,7 +334,7 @@
   .section-divider {
     height: 1px;
     background: linear-gradient(90deg, transparent, var(--line) 20%, var(--line) 80%, transparent);
-    margin: 50px 0;
+    margin: 60px 0;
   }
 
   /* Coming soon placeholder */
@@ -255,10 +353,36 @@
     display: block;
   }
 
-  @media (max-width: 640px) {
-    .dataset-card { padding: 22px; }
+  @media (max-width: 768px) {
+    .dataset-card { padding: 24px; }
     .dataset-title { font-size: 1.25rem; }
-    .dataset-stats { grid-template-columns: repeat(2, 1fr); }
+    .dataset-stats { 
+      grid-template-columns: repeat(2, 1fr); 
+      gap: 12px;
+    }
+    .stat-item:not(:last-child) {
+      border-right: none;
+    }
+    .stat-item:nth-child(1), .stat-item:nth-child(2) {
+      border-bottom: 1px solid var(--line);
+    }
+    .pub-list > li {
+      grid-template-columns: 1fr;
+      gap: 16px;
+      padding: 22px;
+    }
+    .pub-year {
+      width: fit-content;
+      padding: 6px 16px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .dataset-card { padding: 20px; }
+    .dataset-header {
+      flex-direction: column;
+      gap: 12px;
+    }
   }
 </style>
 </head>
@@ -298,7 +422,7 @@
         Code, datasets, and supplementary materials associated with my peer-reviewed publications. Each package includes everything needed to reproduce the reported findings.
       </p>
 
-      <div class="pub-list">
+      <ul class="pub-list">
         <li>
           <span class="pub-year">2026</span>
           <div class="pub-body">
@@ -324,7 +448,7 @@
             </p>
           </div>
         </li>
-      </div>
+      </ul>
     </div>
 
     <div class="section-divider"></div>
@@ -342,7 +466,7 @@
         <div class="dataset-header">
           <div>
             <h3 class="dataset-title">fuzzyml — Fuzzy Logic Modeling Library</h3>
-            <p style="color:var(--ink-soft);font-size:0.9rem;margin:6px 0 0 0">
+            <p style="color:var(--ink-soft);font-size:0.9rem;margin:0">
               A lightweight Python library for fuzzy logic modeling and soft computing
             </p>
           </div>
@@ -377,7 +501,7 @@
         <div class="dataset-header">
           <div>
             <h3 class="dataset-title">aicore — Python Core AI Library</h3>
-            <p style="color:var(--ink-soft);font-size:0.9rem;margin:6px 0 0 0">
+            <p style="color:var(--ink-soft);font-size:0.9rem;margin:0">
               Core ML primitives, distance metrics, and foundational utilities for AI research
             </p>
           </div>
@@ -407,7 +531,8 @@
         </div>
       </article>
 
-     
+    </div>
+    
     <div class="section-divider"></div>
 
     <!-- ========= SECTION 3: OPEN DATASETS ========= -->
@@ -423,7 +548,7 @@
         <div class="dataset-header">
           <div>
             <h3 class="dataset-title">Breast Cancer CPTAC GDC 2025 — Classification Dataset</h3>
-            <p style="color:var(--ink-soft);font-size:0.9rem;margin:6px 0 0 0">
+            <p style="color:var(--ink-soft);font-size:0.9rem;margin:0">
               Clinical + gene expression data for binary classification of breast cancer stage
             </p>
           </div>
@@ -482,7 +607,7 @@
         </div>
       </article>
 
-      
+    </div>
   </div>
 </section>
 
