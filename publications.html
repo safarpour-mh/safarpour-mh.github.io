@@ -3,19 +3,87 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Publications — M. H. Safarpour</title>
-<meta name="description" content="Publications by M. H. Safarpour, PhD Candidate in Computer Science specializing in Data Mining, Feature Selection and Interpretable AI.">
+<title>Publications — M. H. Safarpour, PhD</title>
+<meta name="description" content="Publications by M. H. Safarpour, PhD in Computer Science, specializing in Data Mining, Feature Selection, and Interpretable AI.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧠</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+
+<!-- Minimal inline styles for the publication list to ensure it looks perfect -->
+<style>
+  .selected-pubs {
+    list-style: none;
+    padding: 0;
+    margin: 40px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .pub-item {
+    padding: 24px;
+    background: var(--paper, #ffffff);
+    border: 1px solid var(--line, #e5e7eb);
+    border-left: 4px solid var(--accent, #3b82f6);
+    border-radius: 8px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .pub-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  }
+  .pub-title {
+    font-family: var(--serif, serif);
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--ink, #111827);
+    margin: 0 0 8px 0;
+    line-height: 1.4;
+  }
+  .pub-authors {
+    font-size: 0.95rem;
+    color: var(--ink-soft, #4b5563);
+    margin: 0 0 8px 0;
+  }
+  .pub-authors strong {
+    color: var(--ink, #111827);
+    font-weight: 600;
+  }
+  .pub-journal {
+    font-size: 0.9rem;
+    color: var(--accent, #3b82f6);
+    font-weight: 600;
+    font-style: italic;
+    margin: 0 0 12px 0;
+  }
+  .pub-links {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .pub-links a {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--ink, #111827);
+    text-decoration: none;
+    padding: 4px 10px;
+    border: 1px solid var(--line, #e5e7eb);
+    border-radius: 6px;
+    transition: all 0.2s;
+  }
+  .pub-links a:hover {
+    background: var(--accent, #3b82f6);
+    color: white;
+    border-color: var(--accent, #3b82f6);
+  }
+</style>
 </head>
 <body>
 
 <header class="site-header">
   <div class="container nav-wrap">
-    <a class="brand" href="index.html">M. H. Safarpour</a>
+    <a class="brand" href="index.html">M. H. Safarpour, PhD</a>
     <nav class="site-nav">
       <a href="index.html">Home</a>
       <a href="about.html">About Me</a>
@@ -31,20 +99,64 @@
   <div class="container">
     <p class="kicker">Scholarly Output</p>
     <h1>Publications</h1>
-    <p class="lede">My research focuses on feature selection, interpretable AI, and hybrid intelligence. Below is a curated preview of recent work — for the complete and continuously updated list, visit my Google Scholar profile.</p>
+    <p class="lede">My research portfolio focuses on feature selection, interpretable AI, and hybrid intelligence. Below is a curated selection of recent peer-reviewed work.</p>
   </div>
 </section>
 
+<!-- ===== Selected Publications (NEW & CRITICAL) ===== -->
+<section>
+  <div class="container" style="max-width: 900px;">
+    <h2 class="section-title" style="margin-bottom: 8px;"><small>Recent Work</small>Selected Publications</h2>
+    <p style="color: var(--ink-soft); margin-bottom: 32px;">For the complete and continuously updated list, please visit my Google Scholar or ORCID profiles.</p>
+    
+    <ul class="selected-pubs">
+      <!-- Paper 1: New TFSS Paper -->
+      <li class="pub-item">
+        <h3 class="pub-title">Dimensionality Reducing and Classification Enhancing: A Bi-Objective Feature Selection Model Using Łukasiewicz T-Norm</h3>
+        <p class="pub-authors"><strong>M. H. Safarpour</strong>, S. M. Alavi, M. Izadikhah, H. Dibachi</p>
+        <p class="pub-journal">Transactions on Fuzzy Sets and Systems, 6(2), 2026</p>
+        <div class="pub-links">
+          <a href="https://sanad.iau.ir/Journal/tfss/Article/1217698" target="_blank" rel="noopener">Article</a>
+          <a href="https://doi.org/10.71602/TFSS.2027.1217698" target="_blank" rel="noopener">DOI</a>
+        </div>
+      </li>
 
-<!-- ===== Google Scholar CTA (Main Call to Action) ===== -->
-<section style="background:var(--ink);color:var(--cream);padding:80px 0;margin-top:20px">
+      <!-- Paper 2: Royal Society Open Science -->
+      <li class="pub-item">
+        <h3 class="pub-title">Physics-grounded optimization via interpretable process mapping</h3>
+        <p class="pub-authors"><strong>M. H. Safarpour</strong>, M. Kwiatkowska, A. Dunn</p>
+        <p class="pub-journal">Royal Society Open Science, 13(6), 2026</p>
+        <div class="pub-links">
+          <a href="https://royalsocietypublishing.org/rsos/article/13/6/251929/482010/Physics-grounded-optimization-via-interpretable" target="_blank" rel="noopener">Article</a>
+          <a href="https://github.com/safarpour-mh/PWPA" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://doi.org/10.5281/zenodo.17237555" target="_blank" rel="noopener">Zenodo</a>
+        </div>
+      </li>
+
+      <!-- Paper 3: IEEE Access -->
+      <li class="pub-item">
+        <h3 class="pub-title">SimGroup-FS: Multi-Way Redundancy Modeling for Interpretable Feature Selection in Supervised Learning</h3>
+        <p class="pub-authors"><strong>M. H. Safarpour</strong></p>
+        <p class="pub-journal">IEEE Access, 14, 2026</p>
+        <div class="pub-links">
+          <a href="https://ieeexplore.ieee.org/document/11408164" target="_blank" rel="noopener">Article</a>
+          <a href="https://github.com/safarpour-mh/SimGroupFS" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://doi.org/10.5281/zenodo.18215330" target="_blank" rel="noopener">Zenodo</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== Google Scholar CTA ===== -->
+<section style="background:var(--ink);color:var(--cream);padding:80px 0;margin-top:60px">
   <div class="container" style="text-align:center;max-width:700px">
-    <p style="text-transform:uppercase;letter-spacing:.18em;font-size:.78rem;font-weight:700;color:var(--accent);margin-bottom:18px">Complete List</p>
+    <p style="text-transform:uppercase;letter-spacing:.18em;font-size:.78rem;font-weight:700;color:var(--accent);margin-bottom:18px">Complete Record</p>
     <h2 style="font-family:var(--serif);font-size:clamp(2rem,4vw,2.8rem);line-height:1.15;margin-bottom:18px;font-weight:600">
-      Explore my full publication record on <em style="color:var(--accent);font-style:italic">Google Scholar</em>.
+      Explore my full publication history on <em style="color:var(--accent);font-style:italic">Google Scholar</em>.
     </h2>
     <p style="font-size:1.1rem;color:rgba(255,255,255,.75);margin-bottom:36px;line-height:1.6">
-      Citations, co-authors, full-text links, and the latest preprints — all in one place.
+      Total citations, co-authors, full-text links, and the latest preprints — all in one place.
     </p>
     <a href="https://scholar.google.com/citations?hl=en&user=7RZGpNcAAAAJ" target="_blank" rel="noopener" class="btn btn-primary" style="padding:18px 36px;font-size:1.05rem">
       View on Google Scholar →
@@ -55,12 +167,12 @@
   </div>
 </section>
 
- <!-- ===== Footer ===== -->
+<!-- ===== Footer ===== -->
 <footer class="site-footer">
   <div class="container footer-grid">
     <div>
       <p class="brand-light">M. H. Safarpour</p>
-      <p>PhD Candidate in Computer Science<br>Data Scientist & Researcher</p>
+      <p>PhD in Computer Science<br>AI Researcher & Open Science Advocate</p>
     </div>
     <div>
       <h4>Explore</h4>
@@ -74,7 +186,7 @@
       <a href="https://scholar.google.com/citations?hl=en&user=7RZGpNcAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
       <a href="https://orcid.org/0009-0008-5274-8551" target="_blank" rel="noopener">ORCID</a>
       <a href="https://github.com/safarpour-mh" target="_blank" rel="noopener">GitHub</a>
-      <a href="https://zenodo.org/search?q=metadata.creators.person_or_org.name%3A%22safarpour-mh%22&l=list&p=1&s=10&sort=bestmatch" target="_blank" rel="noopener">Zenedo</a>
+      <a href="https://zenodo.org/search?q=metadata.creators.person_or_org.name%3A%22safarpour-mh%22&l=list&p=1&s=10&sort=bestmatch" target="_blank" rel="noopener">Zenodo</a>
     </div>
   </div>
   <p class="copyright">© 2026 M. H. Safarpour · All rights reserved</p>
